@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url('fundo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: 'Fredoka', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 10px;
+}
+
+#texto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#texto h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+#texto h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+#calculadora {
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background-color: #fff;
+}
+
+#resultado {
+    grid-column: span 4;
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #e0b692;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
+
+input[type="button"] {
+    height: 50px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+input[type="button"].on-off {
+    grid-column: span 2;
+    background-color: #f1b27b;
+    font-size: 1.2rem;
+}
+
+input[type="button"].on-off:hover {
+    background-color: #b18560;
+}
+
+input[type="button"].operador {
+    background-color: #aaa29c;
+}
+
+input[type="button"].operador:hover {
+    background-color: #6d6762;
+}
+
+input[type="button"].igual {
+    background-color: #e0b692;
+    grid-column: span 4;
+    font-size: 1.8rem;
+}
+
+
+input[type="button"].igual:hover {
+    background-color: #b49376;
+}
+
+input[type="button"]:hover {
+    background-color: #666;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px 0;
+        background-size: contain;
+    }
+
+    #calculadora {
+        width: 90%;
+        padding: 15px;
+        grid-gap: 8px;
+    }
+
+    input[type="button"] {
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    #resultado {
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    #texto h1 {
+        font-size: 1.5rem;
+    }
+
+    #texto h2 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #calculadora {
+        width: 100%;
+        padding: 10px;
+        grid-gap: 5px;
+    }
+
+    input[type="button"] {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #resultado {
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    #texto h1 {
+        font-size: 1.2rem;
+    }
+
+    #texto h2 {
+        font-size: 0.8rem;
+    }
+}
